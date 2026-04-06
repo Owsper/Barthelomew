@@ -1,15 +1,25 @@
 {
   "manifest_version": 3,
-  "name": "Barthelomew Summoner",
+  "name": "Barthelomew Huggy",
   "version": "1.0",
-  "description": "Click to summon a cute teddy bear with effects!",
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "48": "icons/icon48.png"
-    }
-  },
+  "description": "Click to summon a cute teddy on the page!",
   "icons": {
     "48": "icons/icon48.png"
-  }
+  },
+  "action": {
+    "default_title": "Summon Teddy 🧸"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["teddy.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"]
 }
