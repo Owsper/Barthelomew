@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Barthelomew Summoner",
+  "version": "1.0",
+  "description": "Click to summon a cute teddy bear with effects!",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon48.png"
+  }
+}
