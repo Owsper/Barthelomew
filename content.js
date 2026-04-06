@@ -21,20 +21,27 @@ function showBartholomew() {
     }, 10);
 
 
+
     // Removes bartholomew after 5 seconds with fade out
+        bartholomew.addEventListener("click", function() {
+        bartholomew.classList.remove("shake");
+        void bartholomew.offsetWidth;        // Reset animation
+        bartholomew.classList.add("shake");
+    });
+
+    // Auto disappear after 5 seconds
     setTimeout(function() {
+        if (document.getElementById("bartholomew")) {
+            bartholomew.style.transition = "all 0.9s ease";
+            bartholomew.style.opacity = "0";
+            bartholomew.style.transform = "translate(-50%, -50%) scale(0.7)";
 
-        bartholomew.style.transition = "all 0.8s ease";
-        bartholomew.style.opacity = "0";
-        bartholomew.style.transform = "translate(-50%, -50%) scale(0.6)";
-
-        // Completely remove from page after fade out
-        setTimeout(function() {
-            bartholomew.remove();
-        }, 800);
-
-    }, 5000); 
+            setTimeout(function() {
+                bartholomew.remove();
+            }, 900);
+        }
+    }, 5000);
 }
 
-// Calling function
 showBartholomew();
+  

@@ -3,12 +3,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 160px;
+    font-size: 500px;
     z-index: 9999999;
-    pointer-events: none;
+    pointer-events: auto;
     opacity: 0;
     transition: all 0.6s ease;
-    text-shadow: 0 10px 30px rgba(255, 100, 100, 0.4);
+    text-shadow: 0 20px 50px rgba(255, 100, 100, 0.4);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #bartholomew.show {
@@ -16,3 +19,14 @@
     transform: translate(-50%, -50%) scale(1.05);
 }
 
+@keyframes cuteShake {
+    0%   { transform: translate(-50%, -50%) rotate(-8deg) scale(1.03); }
+    25%  { transform: translate(-50%, -50%) rotate(10deg) scale(1.03); }
+    50%  { transform: translate(-50%, -50%) rotate(-9deg) scale(1.03); }
+    75%  { transform: translate(-50%, -50%) rotate(9deg) scale(1.03); }
+    100% { transform: translate(-50%, -50%) rotate(0deg) scale(1.03); }
+}
+
+#bartholomew.shake {
+    animation: cuteShake 0.75s ease-in-out;
+}
