@@ -20,6 +20,7 @@ function showBartholomew() {
         bartholomew.classList.add("show");
     }, 10);
 
+
     // Removes bartholomew after 5 seconds with fade out
     setTimeout(function() {
 
