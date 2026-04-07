@@ -22,26 +22,33 @@ function showBartholomew() {
 
 
 
-    // Removes bartholomew after 5 seconds with fade out
+    // Makes Barthelomew shake when clicked
+
         bartholomew.addEventListener("click", function() {
         bartholomew.classList.remove("shake");
-        void bartholomew.offsetWidth;        // Reset animation
+        void bartholomew.offsetWidth;       
         bartholomew.classList.add("shake");
     });
 
     // Auto disappear after 5 seconds
+
     setTimeout(function() {
         if (document.getElementById("bartholomew")) {
             bartholomew.style.transition = "all 0.9s ease";
             bartholomew.style.opacity = "0";
             bartholomew.style.transform = "translate(-50%, -50%) scale(0.7)";
 
+            
+            //Removes Barthelmoew if isnt clicked
+            
             setTimeout(function() {
                 bartholomew.remove();
             }, 900);
         }
     }, 5000);
 }
+
+//Calling function
 
 showBartholomew();
   

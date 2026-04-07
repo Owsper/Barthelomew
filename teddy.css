@@ -12,7 +12,9 @@
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
+
 }
+
 
 #bartholomew.show {
     opacity: 1;
@@ -30,3 +32,4 @@
 #bartholomew.shake {
     animation: cuteShake 0.75s ease-in-out;
 }
+
