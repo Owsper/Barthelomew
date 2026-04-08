@@ -1,3 +1,4 @@
+/* Barthelomew the Teddy Bear */
 #bartholomew {
     position: fixed;
     top: 50%;
@@ -15,12 +16,13 @@
 
 }
 
-
+/* Displayes Bartholomew */
 #bartholomew.show {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.05);
 }
 
+/* Shakes Bartholomew when clicked */
 @keyframes cuteShake {
     0%   { transform: translate(-50%, -50%) rotate(-8deg) scale(1.03); }
     25%  { transform: translate(-50%, -50%) rotate(10deg) scale(1.03); }
@@ -33,3 +35,7 @@
     animation: cuteShake 0.75s ease-in-out;
 }
 
+
+#bartholomew.explode {
+    font-size: 1000px;
+}
