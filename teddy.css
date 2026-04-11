@@ -1,4 +1,5 @@
 /* Barthelomew the Teddy Bear */
+
 #bartholomew {
     position: fixed;
     top: 50%;
@@ -17,12 +18,14 @@
 }
 
 /* Displayes Bartholomew */
+
 #bartholomew.show {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* Shakes Bartholomew when clicked */
+
 @keyframes cuteShake {
     0%   { transform: translate(-50%, -50%) rotate(-8deg) scale(1.03); }
     25%  { transform: translate(-50%, -50%) rotate(10deg) scale(1.03); }
@@ -35,10 +38,7 @@
     animation: cuteShake 0.75s ease-in-out;
 }
 
-#bartholomew.explode {
-    animation: explode 0.75s forwards;
-    pointer-events: none;
-}
+/* Explodes Bartholomew */
 
 @keyframes explode {
     0% {
@@ -46,12 +46,18 @@
         opacity: 1;
     }
     45% {
-        transform: translate(-50%, -50%) scale(1.85);   /* Grow big smoothly */
+        transform: translate(-50%, -50%) scale(1.85);   
         opacity: 1;
     }
     100% {
-        transform: translate(-50%, -50%) scale(0.15);   /* Shrink and disappear */
+        transform: translate(-50%, -50%) scale(0.15);  
         opacity: 0;
     }
 }  
+
+#bartholomew.explode {
+    animation: explode 0.75s forwards;
+    pointer-events: none;
+}
+
 
